@@ -5,72 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include custom CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to the Art Gallery</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Artists</a></li>
-                <li><a href="#">Exhibitions</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="bg-gray-900 text-white">
+        <div class="container mx-auto py-4 px-6 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">Welcome to the Art Gallery</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Artists</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Exhibitions</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="banner">
-            <h2>Current Exhibition</h2>
-            <p>Discover stunning artwork by talented artists.</p>
-            <a href="#" class="cta">Learn More</a>
-        </section>
-
-        <section class="featured-artists">
-            <h2>Featured Artists</h2>
-            <div class="artist">
-                <img src="artist1.jpg" alt="Artist 1">
-                <h3>Artist 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">View Artworks</a>
-            </div>
-            <div class="artist">
-                <img src="artist2.jpg" alt="Artist 2">
-                <h3>Artist 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">View Artworks</a>
-            </div>
-            <div class="artist">
-                <img src="artist3.jpg" alt="Artist 3">
-                <h3>Artist 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">View Artworks</a>
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-4">Current Exhibition</h2>
+                <p class="text-gray-700 mb-8">Discover stunning artwork by talented artists.</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Learn More</a>
             </div>
         </section>
 
-        <section class="upcoming-exhibitions">
-            <h2>Upcoming Exhibitions</h2>
-            <div class="exhibition">
-                <img src="exhibition1.jpg" alt="Exhibition 1">
-                <h3>Exhibition 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Learn More</a>
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8">Featured Artists</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="artist1.jpg" alt="Artist 1" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Artist 1</h3>
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="block mt-2 text-blue-500 hover:text-blue-700">View Artworks</a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="artist2.jpg" alt="Artist 2" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Artist 2</h3>
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="block mt-2 text-blue-500 hover:text-blue-700">View Artworks</a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="artist3.jpg" alt="Artist 3" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Artist 3</h3>
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="block mt-2 text-blue-500 hover:text-blue-700">View Artworks</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="exhibition">
-                <img src="exhibition2.jpg" alt="Exhibition 2">
-                <h3>Exhibition 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">Learn More</a>
+        </section>
+
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8">Upcoming Exhibitions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="exhibition1.jpg" alt="Exhibition 1" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Exhibition 1</h3>
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="block mt-2 text-blue-500 hover:text-blue-700">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="exhibition2.jpg" alt="Exhibition 2" class="w-full">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Exhibition 2</h3>
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="block mt-2 text-blue-500 hover:text-blue-700">Learn More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Art Gallery. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Art Gallery. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Include custom JavaScript file -->
+    <script src="script.js"></script>
 </body>
 
 </html>
